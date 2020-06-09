@@ -1,6 +1,7 @@
 from django.contrib import admin
 from django.urls import path
 
+from services.views.populating_csc import PopulatingCSCAPIView
 from services.views.company import CompanyListCreateAPIView, CompanyRetrieveUpdateDetailAPIView
 from services.views.item import ItemListCreateAPIView, ItemRetrieveUpdateDetailAPIView
 from services.views.item_category import ItemCategoryListCreateAPIView, ItemCategoryRetrieveUpdateDetailAPIView
@@ -26,6 +27,10 @@ from services.views.tax import TaxListCreateAPIView, TaxRetrieveUpdateDetailAPIV
 
 
 urlpatterns = [
+    ###########################################
+    # Populating CSC
+    ###########################################
+    path('initialize_csc', PopulatingCSCAPIView.as_view(), name="populating-csc"),
     ###########################################
     # Base Geolocations
     ###########################################
