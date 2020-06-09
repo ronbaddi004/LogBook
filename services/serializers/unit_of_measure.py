@@ -22,7 +22,7 @@ class UnitOfMeasureSerializer(serializers.ModelSerializer):
             'my_company',
 
             'name',
-            'my_item',
+            'my_unit',
             'value',
 
             'created_at',

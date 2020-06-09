@@ -45,7 +45,7 @@ class PartySerializer(serializers.ModelSerializer):
 
             'my_state',
 
-            'gst_registration',
+            'gst_registration_type',
             'gstin',
 
             'credit_days',
