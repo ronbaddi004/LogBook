@@ -24,6 +24,7 @@ from services.views.geolocations import (
 )
 from services.views.party import PartyListCreateAPIView, PartyRetrieveUpdateDetailAPIView
 from services.views.tax import TaxListCreateAPIView, TaxRetrieveUpdateDetailAPIView
+from services.views.choices import ChoicesAPIView
 
 
 urlpatterns = [
@@ -31,6 +32,10 @@ urlpatterns = [
     # Populating CSC
     ###########################################
     path('initialize_csc', PopulatingCSCAPIView.as_view(), name="populating-csc"),
+    ###########################################
+    # Choices
+    ###########################################
+    path('choices', ChoicesAPIView.as_view(), name='choices'),
     ###########################################
     # Base Geolocations
     ###########################################
